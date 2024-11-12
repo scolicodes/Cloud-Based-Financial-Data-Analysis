@@ -1,0 +1,10 @@
+# Ignore environment variables
+.env
+
+# Ignore Python cache and virtual environment files
+__pycache__/
+*.pyc
+venv/
+
+# Ignore any other files or folders you don’t want to track
+*.csv
