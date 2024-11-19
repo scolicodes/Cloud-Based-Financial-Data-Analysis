@@ -8,7 +8,7 @@ import os
 
 app = func.FunctionApp()
 
-@app.timer_trigger(schedule="0 0 11 * * *", arg_name="myTimer", run_on_startup=True,
+@app.timer_trigger(schedule="0 0 11 * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False) 
 def timer_trigger(myTimer: func.TimerRequest) -> None:
     if myTimer.past_due:
@@ -25,8 +25,7 @@ load_dotenv()
 apiKey = os.getenv("API_KEY")
 connectStr = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
 
-# symbols = ['RIVN', 'COIN', 'WM', 'AAPL', 'BK', 'TSLA', 'MNMD']
-symbols = ['TSLA', 'MNMD']
+symbols = ['RIVN', 'COIN', 'WM', 'AAPL', 'BK', 'TSLA', 'MNMD']
 base_url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY'
 
 
