@@ -146,5 +146,5 @@ venv/
 
 # Ignore any other files or folders you don’t want to track
 *.csv
-.vscode/
+
 .funcignore 2
